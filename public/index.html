@@ -4,8 +4,46 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <link rel="stylesheet" href="./css/styles.css">
 </head>
+<style>
+    html,
+    body {
+      position: relative;
+      height: 100%;
+    }
+
+    body {
+      background: #eee;
+      font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+      font-size: 14px;
+      color: #000;
+      margin: 0;
+      padding: 0;
+    }
+
+    .swiper {
+      width: 100%;
+      height: 100%;
+    }
+
+    .swiper-slide {
+      text-align: center;
+      font-size: 18px;
+      background: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .swiper-slide img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  </style>
 <body>
 
     <!-- Header start -->
@@ -58,15 +96,46 @@
 
     <!-- Hero start -->
      <section class="pt-[43px] pb-[64px]" style="background-image: url(./img/hero/hero-background.svg); background-size: cover; background-repeat: no-repeat;">
-        <div class="max-w-[1300px] mx-auto px-5">
+        <div class="max-w-[1300px] mx-auto px-5  flex   ">
             <div>
                 <h1 class="font-medium text-[80px] leading-[80px] max-w-[517px] mb-[24px] pt-[126px]">Дизайн-модули</h1>
                 <p class="font-normal text-[24px] leading-[34.8px] max-w-[544px] mb-[40px]">Это готовые тематические решения для стен школы, для оформления рекреаций, столовой, коридоров и классов</p>
                 <button class="py-[30px] px-[60px] bg-black text-white font-normal text-[24px] rounded-[50px]">Перейти в онлайн-каталог</button>
             </div>
+            <div>
+                <div class="swiper mySwiper rounded-[32px] ml-[85px]">
+                    <div class="swiper-wrapper max-w-[616px] max-h-[616px]">
+                      <div class="swiper-slide">
+                        <img src="./img/hero/swiper-img.png" alt="">
+                      </div>
+                      <div class="swiper-slide">
+                        <img src="./img/hero/swiper-img.png" alt="">
+                      </div>
+                      <div class="swiper-slide">
+                        <img src="./img/hero/swiper-img.png" alt="">
+                      </div>
+                      <div class="swiper-slide">
+                        <img src="./img/hero/swiper-img.png" alt="">
+                      </div>
+                    </div>
+                    <div class="swiper-pagination ml-[-270px]"></div>
+                  </div>
+            </div>
         </div>
      </section>
     <!-- Hero end -->
     
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+            loop:true,
+          pagination: {
+            el: ".swiper-pagination",
+          },
+        });
+      </script>
 </body>
 </html>
