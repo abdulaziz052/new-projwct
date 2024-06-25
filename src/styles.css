@@ -14,3 +14,17 @@
 .swiper-pagination-bullet-active{
     background-color: black;
 }
+
+@media (max-width:320px) {
+    .swiper-pagination-bullet{
+        background-color: white;
+        width: 12px;
+        height: 12px;
+        opacity: 1;
+        
+    }
+    .swiper-pagination-bullet-active{
+        background-color: black;
+    }
+    
+}
